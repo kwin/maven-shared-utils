@@ -119,6 +119,15 @@
   </dependencies>
 
   <build>
+    <pluginManagement>
+      <plugins>
+        <!-- downgrade due to https://issues.apache.org/jira/browse/MSHARED-1112 -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
